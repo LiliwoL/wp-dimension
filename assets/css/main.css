@@ -48,6 +48,10 @@
 		-webkit-text-size-adjust: none;
 	}
 
+	h1, h2, h3, h4, h5, h6 {
+		text-transform: capitalize !important;
+	}
+
 /* Box Model */
 
 	*, *:before, *:after {
@@ -1480,9 +1484,10 @@
 			position: relative;
 			width: 40rem;
 			max-width: 100%;
-			background-color: rgba(27, 31, 34, 0.85);
-			border-radius: 4px;
-			opacity: 0;
+			background: linear-gradient(135deg, #6f0000, #200124);
+			border-radius: 15px;
+			border-style: outset;
+			border-width: 4px 4px 4px 4px;
 		}
 		
 		 #pagemain #staticpage {
