@@ -41,7 +41,7 @@
 						'post__not_in' => $exclude_hello_world,
 						'orderby' => 'menu_order',
 						'order' => 'ASC',
-						'posts_per_page' => 8,
+						'posts_per_page' => 3,
 					) );
 
 					// First Loop for the nav
@@ -52,9 +52,24 @@
 							$the_query->the_post();
 							echo '<li><a href="#' . sanitize_title( get_the_title() ) . '">' . get_the_title() . '</a></li>';
 						}
+						echo '</ul></nav>';
 
-						echo '</ul></nav></header>';
 
+
+						// Menu des catégories
+						echo '<nav><ul>';
+							foreach ( get_categories( array(
+								'orderby' => 'name',
+								'order'   => 'ASC',
+								'hide_empty' => false,
+								'exclude' => 1 // desire id
+							) ) as $category ) {
+								echo '<li><a href="' . esc_url( get_category_link( $category->term_id ) ) . '">' . $category->name . '</a></li>';
+							}
+						echo '</ul></nav>';
+
+
+						echo '</header>';
 						// rewind so we can do the content
 						$the_query->rewind_posts();
 
