@@ -31,6 +31,10 @@
 		</style>
 		
 		<?php wp_head(); ?>
+
+		<script>
+			<a href="https://sonyrouhaud.fr/">Coucou c moi</a>
+		</script>
 	</head>
 	<body>
 
