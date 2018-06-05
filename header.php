@@ -6,8 +6,15 @@
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<?php
+			// Un chiffre au hasard
+			$rand =  rand(1, 9);
+
+			// Url du fichier de background
+			$imagebg = get_bloginfo('template_url')."/images/background/$rand.jpg");
+		?>
 		<style>
-		#bg:after {background-image: url("<?php header_image(); ?>");}
+		#bg:after {background-image: url("<?php echo $imagebg; ?>");}
 		</style>
 		
 		<?php wp_head(); ?>
