@@ -8,8 +8,8 @@
 					<?php if ( get_theme_mod( 'dimension_logo' ) ) : ?>
 						<img src="<?php echo esc_url( get_theme_mod( 'dimension_logo' ) ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 					<?php else : ?>
-						<span class=" icon fa-book"></span>
-            <span class="icon fa-eye"></span>
+						<span class="icon fa-eye"></span>
+            <span class="icon fa-book"><span>
 					<?php endif; ?>
 
 					</div>
